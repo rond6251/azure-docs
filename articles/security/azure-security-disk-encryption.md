@@ -785,14 +785,14 @@ Use the [`manage-bde`](https://technet.microsoft.com/library/ff829849.aspx) comm
 #### Encrypting an OS drive on a running Linux VM
 Encryption of an OS drive on a running Linux VM is supported on the following distributions:
 
-* RHEL 7.2
 * CentOS 7.2
 * Ubuntu 16.04
 
 ##### Prerequisites for OS disk encryption
 
 * The VM must be created from the Marketplace image in Azure Resource Manager.
-* Azure VM with at least 4 GB of RAM (recommended size is 7 GB).
+* Azure VM with at least 4 GB of RAM (recommended size for Linux VM is 8 GB).
+* RHEL: Do not use full disk encryption for the operating system disk. Data disks can be encrypted. https://access.redhat.com/articles/product-configuration-for-azure
 * (For RHEL and CentOS) Disable SELinux. To disable SELinux, see "4.4.2. Disabling SELinux" in the [SELinux User's and Administrator's Guide](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/SELinux_Users_and_Administrators_Guide/sect-Security-Enhanced_Linux-Working_with_SELinux-Changing_SELinux_Modes.html#sect-Security-Enhanced_Linux-Enabling_and_Disabling_SELinux-Disabling_SELinux) on the VM.
 * After you disable SELinux, reboot the VM at least once.
 
